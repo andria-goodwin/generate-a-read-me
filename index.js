@@ -106,25 +106,25 @@ What did you learn?`,
             }
         }
     },
-    // {
-    //     type: 'confirm',
-    //     name: 'confirmLicenses',
-    //     message: 'Would you like to include a license?',
-    //     default: false
-    // },
-    // {
-    //     type: 'list',
-    //     name: 'licenses',
-    //     message: 'What license would you like to include?',
-    //     choices: ['MIT', 'GPL', 'CC--0'],
-    //     when: ({ confirmLicenses }) => {
-    //         if (confirmLicenses) {
-    //             return true;
-    //         } else {
-    //             return false;
-    //         }
-    //     }
-    // },
+    {
+        type: 'confirm',
+        name: 'confirmLicenses',
+        message: 'Would you like to include a license?',
+        default: false
+    },
+    {
+        type: 'list',
+        name: 'licenses',
+        message: 'What license would you like to include?',
+        choices: ['MIT', 'GPL', 'CC0'],
+        when: ({ confirmLicenses }) => {
+            if (confirmLicenses) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    },
 ];
 
 // function to write README file
