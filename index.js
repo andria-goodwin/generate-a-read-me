@@ -4,46 +4,33 @@ const fs = require('fs');
 
 const gm = require('./utils/generateMarkdown.js');
 
+const validateInput = (input, message) => {
+    if (input) return true;
+    else {
+        console.log(message)
+        return false;
+    }
+}
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
         name: 'username',
         message: 'What is your GitHub user name?',
-        validate: usernameInput => {
-            if (usernameInput) {
-                return true;
-            } else {
-                console.log('Please add your username.');
-                return false;
-            }
-        }
+        validate: username => validateInput(username, "Please provide your user name.")
     },
     {
         type: 'input',
         name: 'email',
         message: 'What is your e-mail?',
-        validate: emailInput => {
-            if (emailInput) {
-                return true;
-            } else {
-                console.log('Please add your e-mail.');
-                return false;
-            }
-        }
+        validate: email => validateInput(email, "Please add your e-mail.")
     },
     {
         type: 'input',
         name: 'title',
         message: 'What is the title of your project?',
-        validate: titleInput => {
-            if (titleInput) {
-                return true;
-            } else {
-                console.log('Please add your title.');
-                return false;
-            }
-        }
+        validate: title => validateInput(title, "Please add your title.")
     },
     {
         type: 'input',
@@ -53,40 +40,19 @@ What was your motivation?
 Why did you build this project?
 What problem does it solve?
 What did you learn?`,
-        validate: describeInput => {
-            if (describeInput) {
-                return true;
-            } else {
-                console.log('Please add your description.');
-                return false;
-            }
-        }
+        validate: description => validateInput(description, "Please add your description.")
     },
     {
         type: 'input',
         name: 'installation',
         message: 'What are the steps required to install your project?',
-        validate: installInput => {
-            if (installInput) {
-                return true;
-            } else {
-                console.log('Please add your installation instructions or at least a link to the app.');
-                return false;
-            }
-        }
+        validate: installation => validateInput(installation, "Please add your installation instructions or at least a link to the app.")
     },
     {
         type: 'input',
         name: 'usage',
         message: 'How do you use this application?',
-        validate: usageInput => {
-            if (usageInput) {
-                return true;
-            } else {
-                console.log('Please add your usage instructions.');
-                return false;
-            }
-        }
+        validate: usage => validateInput(usage, "Please add your usage instructions.")
     },
     {
         type: 'input',
@@ -97,14 +63,7 @@ What did you learn?`,
         type: 'input',
         name: 'tests',
         message: 'How did you test the application?',
-        validate: testsInput => {
-            if (testsInput) {
-                return true;
-            } else {
-                console.log('Please add your testing process.');
-                return false;
-            }
-        }
+        validate: tests => validateInput(tests, "Please add your testing process.")
     },
     {
         type: 'confirm',
@@ -117,13 +76,7 @@ What did you learn?`,
         name: 'licenses',
         message: 'What license would you like to include?',
         choices: ['MIT', 'GPL', 'CC0'],
-        when: ({ confirmLicenses }) => {
-            if (confirmLicenses) {
-                return true;
-            } else {
-                return false;
-            }
-        }
+        when: ({ confirmLicenses }) => confirmLicenses
     },
 ];
 
