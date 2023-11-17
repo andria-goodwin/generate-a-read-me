@@ -1,9 +1,10 @@
-// TODO: Include packages needed for this application
+// including inquirer and fs packages
 const inquirer = require('inquirer');
 const fs = require('fs');
 
 const gm = require('./utils/generateMarkdown.js');
 
+// function to validate that user has provided input for each question
 const validateInput = (input, message) => {
     if (input) return true;
     else {
@@ -12,7 +13,7 @@ const validateInput = (input, message) => {
     }
 }
 
-// TODO: Create an array of questions for user input
+// array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -74,22 +75,21 @@ What did you learn?`,
     {
         type: 'list',
         name: 'licenses',
-        message: 'What license would you like to include?',
+        message: 'Which license would you like to include?',
         choices: ['MIT', 'GPL', 'CC0'],
         when: ({ confirmLicenses }) => confirmLicenses
     },
 ];
 
-// function to write README file
+// function to write READ ME file
 const writeToFile = data => {
-    // TODO: Create a function to write README file
     fs.writeFile('./new/README.md', data, (err) =>
     err ? console.log(err) : console.log(`Success! You can find your generated READ ME in the "new" folder.`)
     );
 }
 
 
-// TODO: Create a function to initialize app
+// function to initialize app
 const init = () => {
     console.log(`Welcome to the professional READ ME generator!
 Please answer the following questions to generate your READ ME.
