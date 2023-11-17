@@ -1,6 +1,3 @@
-// const inputData = require('../index.js');
-// TODO: Create a function that returns a license badge based on which license is passed in
-
 // Returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -13,7 +10,8 @@ function renderLicenseBadge(license) {
   }
 }
 
-// Returns the license link
+// Returns the license link depending on which license is passed in
+// If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === 'MIT') {
     return 'https://lbesson.mit-license.org/';
@@ -26,7 +24,7 @@ function renderLicenseLink(license) {
   }
 }
 
-// Returns the license section of README
+// Returns the license section of READ ME file
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (!license) {
@@ -40,7 +38,7 @@ This project is covered under the ${license} license. To learn more about what t
 }
 
 
-// TODO: Create a function to generate markdown for README
+// function to generate markdown for the READ ME file
 function generateMarkdown(data) {
   
   return `# ${data.title}
@@ -69,7 +67,6 @@ ${data.tests}
 ## Contributing
 ${data.contributing}
 ${renderLicenseSection(data.licenses)}
-
 ## Questions
 If you have any questions, please feel free to reach me at ${data.email} or visit my GitHub profile @ https://github.com/${data.username}`;
 }
