@@ -24,10 +24,10 @@ You can use this application from the command line. You answer the prompts in th
 The application was tested by running it and trying different combinations to ensure all functions were operating as they should.
 
 ## Contributing
-This project used starter code from the KU edX coding bootcamp and was added to by Andria Goodwin.
+This project used starter code from the KU edX coding bootcamp and was added to by Andria Goodwin
 
 ## License
-This project is covered under the MIT license. To learn more about what this means, click the license button at the top. There is also a "License" section in the repo.
+This project is covered under the MIT license. To learn more about what this means, click the license button at the top.
 
 ## Questions
 If you have any questions, please feel free to reach me at andria.goodwin1@gmail.com or visit my GitHub profile @ https://github.com/andria-goodwin
