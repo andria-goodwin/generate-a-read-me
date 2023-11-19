@@ -14,13 +14,15 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === 'MIT') {
-    return 'https://lbesson.mit-license.org/';
+    return `https://mit-license.org/`
   } else if (license === 'GPL') {
-    return 'http://perso.crans.org/besson/LICENSE.html';
+      return `https://www.gnu.org/licenses/gpl-3.0-standalone.html`
   } else if (license === 'CC0') {
-    return 'https://creativecommons.org/licenses/by-nd/4.0';
-  } else {
-    return '';
+      return `https://creativecommons.org/licenses/by-sa/4.0/legalcode`
+  } else if (license === 'APACHE_2.0') {
+      return `https://www.apache.org/licenses/LICENSE-2.0`
+  } else if (license === 'ISC') {
+      return `https://www.isc.org/licenses/`
   }
 }
 

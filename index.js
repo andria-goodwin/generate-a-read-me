@@ -76,7 +76,7 @@ What did you learn?`,
         type: 'list',
         name: 'licenses',
         message: 'Which license would you like to include?',
-        choices: ['MIT', 'GPL', 'CC0'],
+        choices: ['MIT', 'GPL', 'CC0', 'APACHE_2.0', 'ISC'],
         when: ({ confirmLicenses }) => confirmLicenses
     },
 ];
