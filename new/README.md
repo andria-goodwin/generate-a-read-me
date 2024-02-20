@@ -1,6 +1,6 @@
-# Generate a READ ME
+# AG Portfolio
 
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://mit-license.org/)
 
 ## Table of Contents
 * [Description](#description)
@@ -12,19 +12,19 @@
 * [Questions](#questions)
 
 ## Description
-As a developer, I wanted a program to help me build a professional READ ME file for my projects. I built this project because it will help me build a READ ME file faster than before. Now all I have to do is answer questions that I already know about the project and the markdown file is automatically created. I learned more about node suring this project, specifically arrow functions and other ways to write more efficient code.
+As a bootcamp student, I want a professional portfolio to showcase my skills so that I have something to show potential employers. This portfolio will serve that purpose as it can be accessed from anywhere. I built this project to test my knowledge and skills using React. I learned more about how React routes work and relearned a lot about CSS and how it works with React.
 
 ## Installation
-N/A
+No installation required. Simply got to the website at https://andria-goodwin-portfolio.netlify.app/
 
 ## Usage
-You can use this application from the command line. You answer the prompts in the command line and the program automatically generates a markdown file using the information you entered. Here is a walkthrough video on how to use the Generate a READ ME application: https://drive.google.com/file/d/1QWrfWp6wn_S4CkIv6qTxQ3wD7XMh7vMi/view
+My portfolio feature an intuitive UI with navigation tabs. Simply click on the tab of the section you'd like to see and you will be routed there.
 
 ## Tests
-The application was tested by running it and trying different combinations to ensure all functions were operating as they should.
+I tested the application through trial and error.
 
 ## Contributing
-This project used starter code from the KU edX coding bootcamp and was added to by Andria Goodwin
+Andria Goodwin
 
 ## License
 This project is covered under the MIT license. To learn more about what this means, click the license button at the top.
